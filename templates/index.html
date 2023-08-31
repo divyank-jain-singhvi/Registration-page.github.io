@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+</head>
+<body>
+    <div class="background signin" id="background">
+    <button class="close" id="close">X</button>
+    <div class="form-detail">
+    <div class="user-detail">{{ greets }}</div>
+    <form action="/email" method="POST">
+    <p class="tag">Email ID : <p class="data">{{ user_email_input }}</p></p>
+    <input type="submit" value="email">
+</form>
+<form action="/password" method="POST">
+    <p class="tag">Password : <p class="data">{{ user_password_input }}</p></p>
+    <input type="submit" value="password">
+</form>
+<form action="/confirm_password" method="POST">
+    <p class="tag">Confirm Password : <p class="data">{{ user_confirm_password_input }}</p></p>
+    <input type="submit" value="confirm password">
+</form>
+<form action="/phone" method="POST">
+    <p class="tag">Phone Number : <p class="data">{{ user_phone_no_input }}</p></p>
+    <input type="submit" value="phone no">
+</form>
+<form action="/country" method="POST">
+    <p class="tag">Country Name : <p class="data">{{ user_country_input }}</p></p>
+    <input type="submit" value="country">
+</form>
+<form action="/state" method="POST">
+    <p class="tag">State Name : <p class="data">{{ user_state_input }}</p></p>
+    <input type="submit" value="state">
+</form>
+</div>
+<div class="submition-form">
+    <form action="/sign in" method="POST">
+        <input type="submit" value="sign in">
+    </form>
+    <form action="/login" method="POST">
+        <input type="submit" value="login">
+    </form>
+</div>
+</div>
+<div class="signin-opacity"><button id="changeOpacity">Sign In</button></div>
+
+
+<!-- <div class="background login" id="background1">
+<button class="close" id="close1">X</button>
+<div class="form-detail">
+    <div class="user-detail">{{ greets }}</div>
+    <form action="/email" method="POST">
+    <p class="tag">Email ID : <p class="data">{{ user_email_input }}</p></p>
+    <input type="submit" value="email">
+</form>
+<form action="/password" method="POST">
+    <p class="tag">Password : <p class="data">{{ user_password_input }}</p></p>
+    <input type="submit" value="password">
+</form>
+</div>
+<div class="submition-form">
+    <form action="/sign in" method="POST">
+        <input type="submit" value="sign in">
+    </form>
+    <form action="/login" method="POST">
+        <input type="submit" value="login">
+    </form>
+</div>
+</div>
+<button id="changeOpacity1">Change Opacity</button> -->
+
+<script>
+    // document.getElementById("changeOpacity1").addEventListener("click", function() {
+    //   var content1 = document.querySelector(".login");
+    //   content1.style.opacity = 1;
+    //   content1.style.zIndex=2;
+    // });
+    // document.getElementById("close1").addEventListener("click", function() {
+    //   var content1 = document.querySelector(".login");
+    //   content1.style.opacity = 0;
+    //   content1.style.zIndex=1;
+    // });
+    document.getElementById("changeOpacity").addEventListener("click", function() {
+      var content = document.querySelector(".signin");
+      content.style.opacity = 1;
+      content.style.zIndex=2;
+    });
+    document.getElementById("close").addEventListener("click", function() {
+      var content1 = document.querySelector(".signin");
+      content1.style.opacity = 0;
+      content1.style.zIndex=1;
+    });
+
+</script>
+</body>
+</html>
